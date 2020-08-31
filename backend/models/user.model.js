@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+// const router = require("../routes/exercises");
 
 const Schema = mongoose.Schema;
 
@@ -17,4 +18,6 @@ const userSchema = new Schema(
   }
 );
 
-export const User = mongoose.model("User", userSchema);
+const User = mongoose.model("User", userSchema);
+
+module.exports = User;

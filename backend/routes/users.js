@@ -1,4 +1,4 @@
-export const router = require("express").Router();
+const router = require("express").Router();
 let User = require("../models/user.model");
 
 // Handles HTTP GET requests on /users/URL path
@@ -19,7 +19,7 @@ router.route("/add").post((req, res) => {
   newUser
     .save()
     .then(() => res.json(`User added!`))
-    .catch((err) => res.status(400).json(`Erro: ${err}`));
+    .catch((err) => res.status(400).json(`Error: ${err}`));
 });
 
 module.exports = router;
